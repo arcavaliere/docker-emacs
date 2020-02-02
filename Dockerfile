@@ -62,6 +62,8 @@ ENV UNAME="emacser" \
 
 COPY .spacemacs /home/emacs/
 
+RUN git clone https://github.com/syl20bnr/spacemacs.git -b develop /home/emacs/.emacs.d
+
 WORKDIR "${WORKSPACE}"
 
 ENTRYPOINT ["asEnvUser"]
